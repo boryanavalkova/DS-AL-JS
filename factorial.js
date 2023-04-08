@@ -1,11 +1,10 @@
 //factorial of a number n
 //O(n)
 function factorial(n) {
-    let res = 1;
-    for (let i = 2; i <= n; i++) {
-        res = res * i;
+    if (n === 0) {
+        return 1;
     }
-    return res;
+    return n * factorial(n - 1);
 }
 
 console.log(factorial(5))

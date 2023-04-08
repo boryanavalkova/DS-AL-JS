@@ -1,11 +1,10 @@
-//produces the first n numbers of the fibonacci sequence
-//O(n)
+//produces the n-th index's value of the fibonacci sequence
+//O(2^n) -> not great for solving the fibonacci problem
 function fibonacci(n) {
-    const fib = [0, 1];
-    for (let i = 2; i < n; i++) {
-        fib[i] = fib[i - 1] + fib[i - 2];
+    if (n < 2) {
+        return n
     }
-    return fib;
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 console.log(fibonacci(4));
